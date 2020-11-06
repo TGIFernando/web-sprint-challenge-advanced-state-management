@@ -7,7 +7,7 @@ class Form extends Component{
         name: '',
         age: '',
         height: '',
-        id: Date.now(),
+        id: '',
     }
     
     onSubmit = e => {
@@ -15,9 +15,6 @@ class Form extends Component{
         const len = this.props.smurfs.length
         this.setState({...this.state, id: len})
         this.props.addSmurf(this.state)
-        console.log('My Smurf: ', this.state)
-        console.log('Data Smurf', this.props.smurfs)
-        console.log("Length", len)
     }
 
     onChange = e => {
@@ -28,7 +25,6 @@ class Form extends Component{
     render(){
         return(
             <div>
-                <h1>Hello From Form</h1>
                 <form onSubmit={this.onSubmit}>
                     <label>Name</label>
                     <input value={this.state.name} onChange={this.onChange} name='name' type='text'/>

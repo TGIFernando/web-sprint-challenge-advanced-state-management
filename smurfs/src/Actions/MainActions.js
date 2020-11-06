@@ -10,7 +10,7 @@ export const fetchSmurfs = () => (dispatch) => {
     dispatch({type: IS_LOADING})
     axios.get(`http://localhost:3333/smurfs`)
         .then(res => {
-            console.log(res.data)
+
             dispatch({type: LOADED})
         }) .catch(err => {
             console.log(err)
@@ -22,8 +22,7 @@ export const addSmurf = (smurf) => (dispatch) => {
     dispatch({type: IS_LOADING})
     axios.post(`http://localhost:3333/smurfs`, smurf)
         .then(res => {
-            console.log(res.data)
-            dispatch({type: POSTED, payload:res.data})
+            dispatch({type: POSTED, payload: smurf})
         }).catch(err => {
             console.log(err)
             dispatch({type: POSTFAIL})

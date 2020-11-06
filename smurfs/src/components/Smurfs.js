@@ -7,10 +7,9 @@ function SmurfList(props){
     useEffect(()=>{
         props.fetchSmurfs()
     }, [])
-    console.log('smurfs from list', props.smurfs)
+
     return(
         <div>
-            <h1>Hello from Smurfs</h1>
             <div>
                 {props.smurfs.map(smurf => <SmurfMaker key={smurf.id} name={smurf.name} age={smurf.age} height={smurf.height}/>)}
             </div>
