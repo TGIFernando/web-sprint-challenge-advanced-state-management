@@ -3,7 +3,7 @@ import "./App.css";
 import { fetchSmurfs } from '../Actions/MainActions'
 
 import Form from './Form'
-
+import SmurfList from './Smurfs'
 class App extends Component {
   render() {
     
@@ -15,6 +15,7 @@ class App extends Component {
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
         <Form/>
+        <SmurfList/>
       </div>
     );
   }

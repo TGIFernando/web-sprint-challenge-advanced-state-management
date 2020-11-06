@@ -4,6 +4,7 @@ export const ERROR = 'ERROR'
 export const LOADED = 'LOADED'
 export const POSTED = 'POSTED'
 export const POSTFAIL = 'POSTFAIL'
+export const RESET = 'RESET'
 
 export const fetchSmurfs = () => (dispatch) => {
     dispatch({type: IS_LOADING})
@@ -27,4 +28,8 @@ export const addSmurf = (smurf) => (dispatch) => {
             console.log(err)
             dispatch({type: POSTFAIL})
         })
+}
+
+export const reset = {
+    type:RESET
 }

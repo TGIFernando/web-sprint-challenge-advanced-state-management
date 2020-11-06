@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { addSmurf } from '../Actions/MainActions'
+import { addSmurf, reset } from '../Actions/MainActions'
 
 class Form extends Component{
     state = {
@@ -37,6 +37,7 @@ class Form extends Component{
                     <label>Height</label>
                     <input value={this.state.height} onChange={this.onChange} name='height' type='text'/>
                     <button>Fetch Smurf</button>
+                    <button onClick={this.props.reset}>Reset</button>
                 </form>
             </div>
         )
@@ -49,4 +50,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {addSmurf})(Form)
+export default connect(mapStateToProps, {addSmurf,reset})(Form)

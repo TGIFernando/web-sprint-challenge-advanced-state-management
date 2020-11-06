@@ -1,4 +1,4 @@
-import { IS_LOADING, POSTED } from '../Actions/MainActions'
+import { IS_LOADING, POSTED, RESET } from '../Actions/MainActions'
 
 const initailState = {
     smurfs: [],
@@ -14,6 +14,9 @@ export const mainReducer = (state=initailState, action) => {
                 smurfs: [...state.smurfs, action.payload],
                 isLoading: false
             }
+
+        case RESET:
+            return initailState
         default:
             return state
     }
