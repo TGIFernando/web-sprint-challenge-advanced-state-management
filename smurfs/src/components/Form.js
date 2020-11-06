@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { addSmurf, reset } from '../Actions/MainActions'
+import * as sty from '../styledComponents/styledForm'
 
 class Form extends Component{
     state = {
@@ -24,18 +25,19 @@ class Form extends Component{
 
     render(){
         return(
-            <div>
-                <form onSubmit={this.onSubmit}>
-                    <label>Name</label>
+            <sty.MainDiv>
+                <sty.Form onSubmit={this.onSubmit}>
+                    <sty.Label>Name </sty.Label>
                     <input value={this.state.name} onChange={this.onChange} name='name' type='text'/>
-                    <label>Age</label>
+                    <sty.Label> Age </sty.Label>
                     <input value={this.state.age} onChange={this.onChange} name='age' type='text'/>
-                    <label>Height</label>
+                    <sty.Label> Height </sty.Label>
                     <input value={this.state.height} onChange={this.onChange} name='height' type='text'/>
-                    <button>Fetch Smurf</button>
+                    <br></br>
+                    <button>Send Smurf</button>
                     <button onClick={this.props.reset}>Reset</button>
-                </form>
-            </div>
+                </sty.Form>
+            </sty.MainDiv>
         )
     }
 }

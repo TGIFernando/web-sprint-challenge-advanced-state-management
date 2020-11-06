@@ -10,7 +10,7 @@ class App extends Component {
     fetchSmurfs()
     return (
       <div className="App">
-        <h1>SMURFS! W/Redux</h1>
+        <h1 className='title'>SMURFS! W/Redux</h1>
         <Form/>
         <SmurfList/>
       </div>

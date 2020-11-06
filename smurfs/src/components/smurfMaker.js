@@ -1,12 +1,15 @@
 import React from 'react'
+import * as sty from '../styledComponents/styledMaker'
 
 function SmurfMaker (props){
     return(
-        <div>
-            <h2>Name: {props.name}</h2>
-            <h2>age: {props.age}</h2>
-            <h2>height: {props.height}</h2>
-        </div>
+        <sty.FlexyDiv>
+            <sty.MainDiv>
+                <sty.H2>Name: {props.name}</sty.H2>
+                <sty.H2>age: {props.age}</sty.H2>
+                <sty.H2>height: {props.height}</sty.H2>
+            </sty.MainDiv>
+        </sty.FlexyDiv>
     )
 }
 
